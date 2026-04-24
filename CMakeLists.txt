@@ -23,6 +23,7 @@ project(
 # In CI, define a job pool for heavy template instantiations to prevent OOM
 if(DEFINED ENV{CI})
   set_property(GLOBAL PROPERTY JOB_POOLS heavy_compilation_pool=2)
+  message(STATUS "Building in CI......")
 endif()
 
 # ----------------------------- Setup -----------------------------

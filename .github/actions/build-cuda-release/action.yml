@@ -16,7 +16,7 @@ runs:
     - name: Build package
       shell: bash
       env:
-        CMAKE_ARGS: -DMLX_BUILD_CUDA=ON
+        CMAKE_ARGS: -DMLX_BUILD_CUDA=ON -GNinja
       run: |
         pip install auditwheel "build<=1.4.2" patchelf setuptools
         python setup.py clean --all
